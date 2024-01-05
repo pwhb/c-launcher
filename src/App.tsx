@@ -1,8 +1,6 @@
 import { useEffect } from 'react';
 import './App.css';
-import { PENIS_SVG, VITE_SVG } from './lib/consts/assets';
-import { signInWithPopup, signOut } from "firebase/auth";
-import { auth, provider } from './lib/firebase';
+import { auth } from './lib/firebase';
 import Navbar from './lib/components/Navbar';
 import { useDispatch, useSelector } from 'react-redux';
 import { setUser } from './lib/redux/authSlice';
@@ -25,9 +23,9 @@ function App()
 
   return (
     <>
-      <div className='h-[100vh] max-w-xl mx-auto bg-slate-100'>
+      <div className='h-[100vh] max-w-xl mx-auto'>
         <Navbar />
-        <input type="text" placeholder="လီးနဲ့ထိုးခံရမယ့်ကောင်" className="w-full max-w-xs rounded-full input input-bordered" />
+      
         {/* <img src={VITE_SVG} alt="penis" className={`mx-auto w-20 animate-bounce`} /> */}
         <CockLauncher />
       </div>

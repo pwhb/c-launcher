@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { VITE_SVG } from "../consts/assets";
+import { PENIS_SVG, VITE_SVG } from "../consts/assets";
 
 export default function CockLauncher()
 {
@@ -8,16 +8,16 @@ export default function CockLauncher()
     const [count, setCount] = useState(0);
     const [speed, setSpeed] = useState(0.7);
     return (
-        <>
+        <div className="flex flex-col gap-10 items-center">
             <div>
                 <p>Count: {count}</p>
             </div>
+            <input type="text" placeholder="လီးနဲ့ထိုးခံရမယ့်ကောင်" className="w-full max-w-xs rounded-full input input-bordered" />
             <motion.img
-                // src={"https://www.svgrepo.com/show/264074/dumbbell-gym.svg"}
-                src={VITE_SVG}
-                className="logo"
+                src={PENIS_SVG}
+                className="mx-auto"
                 alt="Vite logo"
-                style={{ height: 200, rotate: 180 }}
+                style={{ height: 200, rotate: -40 }}
                 animate={{
                     y: isAnimated ? [0, -200, 0] : 0,
                 }}
@@ -41,11 +41,14 @@ export default function CockLauncher()
                 }}
             >
             </motion.img>
+
             <div>
                 <button onClick={() =>
                 {
                     setIsAnimated(true);
-                }}>Up</button>
+                }}
+                className="btn btn-primary"
+                >Up</button>
 
             </div>
             <div>
@@ -56,6 +59,6 @@ export default function CockLauncher()
                 </select>
             </div>
 
-        </>
+        </div>
     );
 }
