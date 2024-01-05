@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { PENIS_SVG, VITE_SVG } from "../consts/assets";
+import { PENIS_SVG } from "../consts/assets";
 
 export default function CockLauncher()
 {
